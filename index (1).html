@@ -1,0 +1,364 @@
+<!doctype html>  
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+
+<!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Breed Breakdown | Find Your New Furry Friend</title>
+  <meta name="description" content="Find Your ideal dog by narrowing down the traits that are important to you.">
+  <meta name="author" content="Ari Rose">
+	<meta property="fb:admins" content="100006671588384" />
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="http://breedbreakdown.com/breedbreakdown.png" />
+<link rel="image_src" href="http://breedbreakdown.com/breedbreakdown.png" />
+
+
+  <!-- jQuery UI css-->	
+  <link rel="stylesheet" href="css/jquery-ui-1.8.10.custom.css?v=2">
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="css/style.css?v=2">
+
+
+
+  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+ 
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <!-- <script src="js/libs/modernizr-1.6.min.js"></script> -->
+
+</head>
+
+<body>
+
+
+  <div id="container">
+  	<div id="fblikewrapper"><div class="fb-like" data-href="http://www.breedbreakdown.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></div>
+    <header>
+
+	<!-- <ul id="filters">
+	  <li><a href="#" data-filter="*">Show all</a></li>
+	  <li><a href="#" data-filter=".shed-low">Low Shedding</a></li>
+	  <li><a href="#" data-filter=".shed-medium">Medium Shedding</a></li>
+	  <li><a href="#" data-filter=".shed-high">High Shedding</a></li>
+	</ul>
+	<p>
+		<label for="size">Size</label>
+		<input type="text" id="size" style="border:0; color:#f6931f; font-weight:bold;" />
+	</p>
+	
+	<div id="sizeSlider">
+	</div> -->
+	
+	<div id='logo'><h1>Breed Breakdown</h1></div>
+	
+	<div id="criteria" style="visibility:hidden">
+			<div id="size" class="criterion">
+				<div>Size<div class="clearSelection"></div>
+				</div>
+				<div id="sizePicker">
+					<input type="radio" name="size" id="size-low" /><label for="size-low">Small</label>
+					<input type="radio" name="size" id="size-medium" /><label for="size-medium">Medium</label>
+					<input type="radio" name="size" id="size-high" /><label for="size-high">Large</label>
+				</div>
+			</div>
+	
+		
+	
+		<!-- 	<div id="iqPicker">
+				<input type="radio" name="iq" id="iq-low" /><label for="iq-low">Kim Kardashian</label>
+				<input type="radio" name="iq" id="iq-medium" /><label for="iq-medium">Average Joe</label>
+				<input type="radio" name="iq" id="iq-high" /><label for="iq-high">Einstein</label>
+				<span class="clearSelection">Clear</span>
+			</div> -->
+			
+			<div id="popularity" class="criterion">
+				<div>Popularity<div class="clearSelection"></div>
+				</div>
+				<div id="popularPicker">
+					<input type="radio" name="popular" id="popular-low" /><label for="popular-low">Rare</label>
+					<input type="radio" name="popular" id="popular-medium" /><label for="popular-medium">Indie</label>
+					<input type="radio" name="popular" id="popular-high" /><label for="popular-high">Pop</label>
+				</div>
+			</div>
+	
+			<div id="shedding" class="criterion">
+				<div>Shedding<div class="clearSelection"></div>
+				</div>
+
+				<div id="shedPicker">
+					<input type="radio" name="shed" id="shed-low" /><label for="shed-low">Low</label>
+					<input type="radio" name="shed" id="shed-medium" /><label for="shed-medium">Medium</label>
+					<input type="radio" name="shed" id="shed-high" /><label for="shed-high">Lots</label>
+				</div>
+			</div>
+	
+	<!-- <div id="watchPicker">
+		<input type="radio" name="watch" id="watch-low" /><label for="watch-low">Don't Worry Be Happy</label>
+		<input type="radio" name="watch" id="watch-medium" /><label for="watch-medium">Doorbells signal the enemy is near</label>
+		<input type="radio" name="watch" id="watch-high" /><label for="watch-high">I repeat, this is Def-Con 4</label>
+		<span class="clearSelection">Clear</span>
+		
+	</div> -->
+			<div id="guarddog" class="criterion">
+				<div>Protection<div class="clearSelection"></div></div>
+				<div id="guardPicker">
+					<input type="radio" name="guard" id="guard-low" /><label for="guard-low">Wimp</label>
+					<input type="radio" name="guard" id="guard-medium" /><label for="guard-medium">Decent</label>
+					<input type="radio" name="guard" id="guard-high" /><label for="guard-high">Badass</label>
+				</div>
+			</div>
+			
+			<div id="training" class="criterion last-child">
+				<div>Trainability<div class="clearSelection"></div></div>
+				<div id="trainingPicker">
+					<input type="radio" name="train" id="train-low" /><label for="train-low">Hard</label>
+					<input type="radio" name="train" id="train-medium" /><label for="train-medium">Medium</label>
+					<input type="radio" name="train" id="train-high" /><label for="train-high">Easy</label>		
+				</div>
+			</div>
+		
+	</div><!--end of Criteria -->
+	
+    </header>
+   
+    <div id="main">
+		<div id="loaderIcon"><img src="css/images/ajax-loader.gif" alt="loading..."/></div>
+		<div id="dogSet" style="visibility:hidden">
+			<div class="dog train-medium iq-medium shed-low    watch-high   guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                       Affenpinscher</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-medium guard-low    popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                        Afghan Hound</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-high   guard-high   popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                    Airedale Terrier</span></div>
+            <div class="dog train-low    iq-low    shed-high   watch-medium guard-high   popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                               Akita</span></div>
+            <div class="dog train-low    iq-low    shed-high   watch-low    guard-medium popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                    Alaskan Malamute</span></div>
+            <div class="dog train-medium iq-medium shed-high   watch-high   guard-low    popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                 American Eskimo Dog</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-high   guard-low    popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                   American Foxhound</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">      American Staffordshire Terrier</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-low    popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">              American Water Spaniel</span></div>
+            <div class="dog train-low    iq-low    shed-high   watch-medium guard-high   popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                  Anatolian Shepherd</span></div>
+            <div class="dog train-high   iq-high   shed-high   watch-medium guard-medium popular-medium size-medium agility-high  "><div class="dogImage"></div><span class="dogName">               Australian Cattle Dog</span></div>
+            <div class="dog train-high   iq-high   shed-high   watch-medium guard-low    popular-high   size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                 Australian Shepherd</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                  Australian Terrier</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-medium guard-low    popular-medium size-low    agility-high  "><div class="dogImage"></div><span class="dogName">                             Basenji</span></div>
+            <div class="dog train-low    iq-low    shed-high   watch-low    guard-low    popular-high   size-medium agility-low   "><div class="dogImage"></div><span class="dogName">                        Basset Hound</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-medium guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                              Beagle</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-low    guard-low    popular-medium size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                      Bearded Collie</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                           Beauceron</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                  Bedlington Terrier</span></div>
+            <div class="dog train-high   iq-high   shed-high   watch-medium guard-high   popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                    Belgian Malinois</span></div>
+            <div class="dog train-high   iq-high   shed-high   watch-medium guard-high   popular-low    size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                    Belgian Sheepdog</span></div>
+            <div class="dog train-high   iq-high   shed-high   watch-medium guard-high   popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                    Belgian Tervuren</span></div>
+            <div class="dog train-medium iq-medium shed-high   watch-medium guard-medium popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                Bernese Mountain Dog</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                        Bichon Frise</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-low    popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">             Black and Tan Coonhound</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-medium guard-high   popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">               Black Russian Terrier</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-low    guard-low    popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                          Bloodhound</span></div>
+            <div class="dog train-high   iq-high   shed-medium watch-medium guard-low    popular-medium size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                       Border Collie</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                       Border Terrier</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-low    guard-low    popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                              Borzoi</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-high   guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                      Boston Terrier</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-medium guard-high   popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                Bouvier des Flandres</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                               Boxer</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                              Briard</span></div>
+            <div class="dog train-high   iq-high   shed-medium watch-medium guard-low    popular-high   size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                            Brittany</span></div>
+            <div class="dog train-low    iq-low    shed-low    watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                    Brussels Griffon</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-low    guard-medium popular-high   size-medium agility-low   "><div class="dogImage"></div><span class="dogName">                             Bulldog</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-medium guard-high   popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                         Bullmastiff</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-medium guard-high   popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                        Bull Terrier</span></div>
+            <div class="dog train-medium iq-medium shed-low    watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                       Cairn Terrier</span></div>
+            <div class="dog train-medium iq-medium shed-high   watch-high   guard-low    popular-low    size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                          Canaan Dog</span></div>
+            <div class="dog train-high   iq-high   shed-high   watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                Cardigan Welsh Corgi</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-low    guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">       Cavalier King Charles Spaniel</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">            Chesapeake Bay Retriever</span></div>
+            <div class="dog train-low    iq-low    shed-medium watch-high   guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                           Chihuahua</span></div>
+            <div class="dog train-low    iq-low    shed-low    watch-low    guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                     Chinese Crested</span></div>
+            <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                    Chinese Shar-Pei</span></div>
+            <div class="dog train-low    iq-low    shed-high   watch-high   guard-high   popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                           Chow Chow</span></div>
+            <div class="dog train-medium iq-medium shed-high   watch-low    guard-low    popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                     Clumber Spaniel</span></div>
+            <div class="dog train-high   iq-high   shed-medium watch-medium guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                      Cocker Spaniel</span></div>
+            <div class="dog train-high   iq-high   shed-high   watch-medium guard-medium popular-high   size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                              Collie</span></div>
+      		<div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">              Curly-Coated Retriever</span></div>
+                <div class="dog train-low    iq-low    shed-medium watch-high   guard-low    popular-high   size-low    agility-low   "><div class="dogImage"></div><span class="dogName">                           Dachshund</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-medium guard-medium popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                           Dalmatian</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-medium guard-medium popular-low    size-low    agility-low   "><div class="dogImage"></div><span class="dogName">              Dandie Dinmont Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-high   popular-high   size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                      Doberman Pinscher</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-medium guard-high   popular-low    size-high   agility-low   "><div class="dogImage"></div><span class="dogName">                   Dogue de Bordeaux</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">              English Cocker Spaniel</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                    English Foxhound</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                      English Setter</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-high   guard-medium popular-high   size-medium agility-medium"><div class="dogImage"></div><span class="dogName">            English Springer Spaniel</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-low    guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                 English Toy Spaniel</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-low    popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                       Field Spaniel</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-high   guard-medium popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                       Finnish Spitz</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-medium popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">               Flat-Coated Retriever</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-low    guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                      French Bulldog</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-high   guard-high   popular-low    size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                     German Pinscher</span></div>
+                 <div class="dog train-high   iq-high   shed-high   watch-high   guard-high   popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                     German Shepherd</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-medium popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">          German Shorthaired Pointer</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">           German Wirehaired Pointer</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-high   popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                     Giant Schnauzer</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">               Glen of Imaal Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-high   watch-medium guard-low    popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                    Golden Retriever</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                       Gordon Setter</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                          Great Dane</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-high   guard-high   popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">          Greater Swiss Mountain Dog</span></div>
+                 <div class="dog train-low    iq-low    shed-high   watch-high   guard-high   popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                      Great Pyrenees</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-low    guard-medium popular-low    size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                           Greyhound</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                             Harrier</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                            Havanese</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                        Ibizan Hound</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                        Irish Setter</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-medium popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                       Irish Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-low    watch-high   guard-medium popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                 Irish Water Spaniel</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-low    guard-high   popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                     Irish Wolfhound</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-low    guard-low    popular-medium size-low    agility-high  "><div class="dogImage"></div><span class="dogName">                   Italian Greyhound</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-high   guard-medium popular-medium size-low    agility-low   "><div class="dogImage"></div><span class="dogName">                Jack Russell Terrier</span></div>
+                 <div class="dog train-low    iq-low    shed-high   watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                       Japanese Chin</span></div>
+                 <div class="dog train-high   iq-high   shed-high   watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                            Keeshond</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-medium popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                  Kerry Blue Terrier</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-medium guard-high   popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                            Komondor</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-medium guard-medium popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                              Kuvasz</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-low    popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                  Labrador Retriever</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-medium guard-medium popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                    Lakeland Terrier</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                          Lhasa Apso</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                             Lowchen</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                             Maltese</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                  Manchester Terrier</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-low    guard-high   popular-high   size-high   agility-low   "><div class="dogImage"></div><span class="dogName">                             Mastiff</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-medium guard-high   popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">              Miniature Bull Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-low    popular-high   size-low    agility-high  "><div class="dogImage"></div><span class="dogName">                  Miniature Pinscher</span></div>
+                 <div class="dog train-high   iq-high   shed-low    watch-high   guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                    Miniature Poodle</span></div>
+                 <div class="dog train-high   iq-high   shed-low    watch-high   guard-medium popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                 Miniature Schnauzer</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-medium guard-high   popular-low    size-high   agility-low   "><div class="dogImage"></div><span class="dogName">                  Neapolitan Mastiff</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-low    guard-high   popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                        Newfoundland</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-medium guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                     Norfolk Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                  Norwegian Elkhound</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                     Norwich Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-medium popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">  Nova Scotia Duck Tolling Retriever</span></div>
+                 <div class="dog train-low    iq-low    shed-high   watch-low    guard-medium popular-medium size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                Old English Sheepdog</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-low    popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                          Otterhound</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-high   guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                            Papillon</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">              Parson Russell Terrier</span></div>
+                 <div class="dog train-low    iq-low    shed-high   watch-high   guard-low    popular-medium size-low    agility-low   "><div class="dogImage"></div><span class="dogName">                           Pekingese</span></div>
+                 <div class="dog train-high   iq-high   shed-high   watch-medium guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                Pembroke Welsh Corgi</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-high   guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">        Petit Basset Griffon Vendeen</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                       Pharaoh Hound</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-medium guard-medium popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                               Plott</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                             Pointer</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-medium agility-high  "><div class="dogImage"></div><span class="dogName">             Polish Lowland Sheepdog</span></div>
+                 <div class="dog train-high   iq-high   shed-high   watch-medium guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                          Pomeranian</span></div>
+                 <div class="dog train-high   iq-high   shed-low    watch-high   guard-medium popular-high   size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                              Poodle</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                Portuguese Water Dog</span></div>
+                 <div class="dog train-low    iq-low    shed-high   watch-low    guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                                 Pug</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-high   popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                                Puli</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-high   popular-medium size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                 Rhodesian Ridgeback</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-high   guard-high   popular-high   size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                          Rottweiler</span></div>
+                 <div class="dog train-low    iq-low    shed-high   watch-low    guard-medium popular-high   size-high   agility-low   "><div class="dogImage"></div><span class="dogName">                       Saint Bernard</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-low    popular-low    size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                              Saluki</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-high   guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                             Samoyed</span></div>
+                 <div class="dog train-high   iq-high   shed-high   watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                          Schipperke</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-low    guard-medium popular-low    size-high   agility-high  "><div class="dogImage"></div><span class="dogName">                  Scottish Deerhound</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                    Scottish Terrier</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-medium guard-low    popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                    Sealyham Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-high   watch-high   guard-medium popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                   Shetland Sheepdog</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                           Shiba Inu</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-high   guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                            Shih Tzu</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-low    guard-high   popular-high   size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                      Siberian Husky</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-high   guard-medium popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                       Silky Terrier</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-medium guard-low    popular-low    size-low    agility-low   "><div class="dogImage"></div><span class="dogName">                        Skye Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                  Smooth Fox Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">         Soft Coated Wheaten Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                    Spinone Italiano</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-high   popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">          Staffordshire Bull Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-low    watch-medium guard-high   popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                           Schnauzer</span></div>
+                 <div class="dog train-low    iq-low    shed-medium watch-medium guard-low    popular-low    size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                      Sussex Spaniel</span></div>
+                 <div class="dog train-medium iq-medium shed-high   watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">                    Swedish Vallhund</span></div>
+                 <div class="dog train-low    iq-low    shed-high   watch-medium guard-high   popular-low    size-high   agility-medium"><div class="dogImage"></div><span class="dogName">                     Tibetan Mastiff</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                     Tibetan Spaniel</span></div>
+                 <div class="dog train-low    iq-low    shed-low    watch-medium guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                     Tibetan Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-high   guard-medium popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                     Toy Fox Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-low    size-low    agility-medium"><div class="dogImage"></div><span class="dogName">              Toy Manchester Terrier</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-medium popular-high   size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                              Vizsla</span></div>
+                 <div class="dog train-high   iq-high   shed-medium watch-medium guard-medium popular-high   size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                          Weimaraner</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-low    guard-low    popular-low    size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                Welsh Spring Spaniel</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                       Welsh Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-high   guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">         West Highland White Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-low    guard-low    popular-medium size-medium agility-high  "><div class="dogImage"></div><span class="dogName">                             Whippet</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-high   guard-low    popular-medium size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                    Wire Fox Terrier</span></div>
+                 <div class="dog train-medium iq-medium shed-medium watch-medium guard-medium popular-medium size-medium agility-medium"><div class="dogImage"></div><span class="dogName">         Wirehaired Pointing Griffon</span></div>
+                 <div class="dog train-medium iq-medium shed-low    watch-high   guard-low    popular-high   size-low    agility-medium"><div class="dogImage"></div><span class="dogName">                   Yorkshire Terrier</span></div> 
+                                                               
+		</div> <!-- dogSEt -->
+    </div><!--main -->
+	 <div id="footer">
+	<p id="credits">Built by <a href="http://www.swissariknife.com">Ari Rose</a> • Logo Design by <a href="http://www.angie-mac.com">Angie McDonald</a></p>
+	  </div>
+  </div> <!-- end of #container -->
+ 
+
+
+  <!-- Javascript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+  <script src="js/libs/jquery-1.4.3.min.js"></script>
+  
+  <script src="js/libs/jquery.isotope.min.js"></script>
+  <script src="js/libs/jquery-ui-1.8.10.custom.min.js"></script>
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <!-- end concatenated and minified scripts-->
+  
+  
+  <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+  <![endif]-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
+       change the UA-XXXXX-X to be your site's ID -->
+ 
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-22320038-1']);
+	  _gaq.push(['_setDomainName', 'breedbreakdown.com']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+  
+</body>
+</html>
