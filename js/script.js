@@ -7,8 +7,23 @@ $(window).load(function(){
 	
 	$('#dogSet').css('visibility','visible');
 	$('#criteria').css('visibility','visible');
+	$('#adContainer').css('visibility','visible');
 	$('#loaderIcon').hide();
+	
+	// Initialize the ad unit after page loads
+	try {
+		(adsbygoogle = window.adsbygoogle || []).push({});
 		
+		// Check if ad is blocked after a short delay
+		setTimeout(function() {
+			if (document.querySelector('.adsbygoogle').clientHeight === 0) {
+				document.getElementById('adFallback').style.display = 'block';
+			}
+		}, 2000);
+	} catch(e) {
+		// If AdSense fails, show fallback
+		document.getElementById('adFallback').style.display = 'block';
+	}
 	
 	
 	$('#dogSet').isotope({
