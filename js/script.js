@@ -7,8 +7,11 @@ $(window).load(function(){
 	
 	$('#dogSet').css('visibility','visible');
 	$('#criteria').css('visibility','visible');
+	$('#adContainer').css('visibility','visible');
 	$('#loaderIcon').hide();
-		
+	
+	// Initialize the ad unit after page loads
+	(adsbygoogle = window.adsbygoogle || []).push({});
 	
 	
 	$('#dogSet').isotope({
